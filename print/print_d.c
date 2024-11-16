@@ -3,7 +3,8 @@
 
 void print_d(va_list *ptr)
 {
-	int i;
-	i = va_arg(*ptr, int);
-	putnbr(i);
+	int input;
+
+	input = va_arg(*ptr, int);
+	putnbr(input);
 }
