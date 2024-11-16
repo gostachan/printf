@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-static void rec(long n)
+static void rec(long long n)
 {
 	char c;
 
@@ -11,7 +11,7 @@ static void rec(long n)
 	write(1, &c, 1);
 }
 
-void putnbr(long n)
+void putnbr(long long n)
 {
 	if (n < 0)
 	{
