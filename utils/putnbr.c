@@ -1,17 +1,17 @@
 #include <unistd.h>
 
-static void rec(long long n)
+static void	rec(long long n)
 {
-	char c;
+	char	c;
 
 	c = n % 10 + '0';
 	if (n == 0)
-		return;
+		return ;
 	rec(n / 10);
 	write(1, &c, 1);
 }
 
-void putnbr(long long n)
+void	putnbr(long long n)
 {
 	if (n < 0)
 	{

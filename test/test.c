@@ -1,6 +1,6 @@
+#include "headers/utils.h"
 #include <stdint.h>
 #include <stdio.h>
-#include "headers/utils.h"
 
 // int main(void)
 // {
@@ -12,10 +12,10 @@
 // 	printf("%ld\n", 0x5fd7bad3a004);
 // }
 
-void l(void *p)
+void	l(void *p)
 {
-	uintptr_t ptr;
-	char *hex;
+	uintptr_t	ptr;
+	char		*hex;
 
 	ptr = (uintptr_t)p;
 	hex = to_hex(ptr, "0123456789abcdef");
@@ -23,10 +23,11 @@ void l(void *p)
 	putstr(hex);
 }
 
-int main(void)
+int	main(void)
 {
-	char *str = "hoge";
+	char	*str;
 
+	str = "hoge";
 	l(str);
 	printf("\n");
 	printf("%p", str);
