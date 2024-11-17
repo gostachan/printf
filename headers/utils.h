@@ -14,8 +14,8 @@
 # define UTILS_H
 
 int		ft_strlen(char *str);
-void	putnbr(long n);
-void	putstr(char *str);
+int	putnbr(long n);
+int	putstr(char *str);
 char	*to_oct(unsigned long long n, char *base);
 char	*to_hex(unsigned long long n, char *base);
 

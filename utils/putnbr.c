@@ -12,23 +12,28 @@
 
 #include <unistd.h>
 
-static void	rec(long long n)
+static void	rec(long long n, int *res)
 {
 	char	c;
 
 	c = n % 10 + '0';
 	if (n == 0)
 		return ;
-	rec(n / 10);
+	rec(n / 10, res);
+	(*res)++;
 	write(1, &c, 1);
 }
 
-void	putnbr(long long n)
+int	putnbr(long long n)
 {
+	int res;
+	res = 0;
 	if (n < 0)
 	{
 		write(1, "-", 1);
 		n *= -1;
+		res++;
 	}
-	rec(n);
+	rec(n, &res);
+	return res;
 }

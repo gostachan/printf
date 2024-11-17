@@ -14,7 +14,7 @@
 #include <stdarg.h>
 #include <stdint.h>
 
-void	print_p(va_list *ptr)
+int	print_p(va_list *ptr)
 {
 	void		*p;
 	uintptr_t	addr;
@@ -24,5 +24,5 @@ void	print_p(va_list *ptr)
 	addr = (uintptr_t)p;
 	hex = to_hex(addr, "0123456789abcdef");
 	putstr("0x");
-	putstr(hex);
+	return (putstr(hex) + 2);
 }

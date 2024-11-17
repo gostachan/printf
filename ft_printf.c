@@ -11,9 +11,10 @@
 /* ************************************************************************** */
 
 #include "headers/print.h"
-#include "headers/utils.h"
 #include <stdarg.h>
 #include <unistd.h>
+
+#include <stdio.h>
 
 int	ft_printf(const char *format, ...);
 
@@ -23,19 +24,25 @@ int	ft_printf(const char *format, ...)
 	int		index;
 	int		res;
 
-	res = ft_strlen((char *)format);
 	va_start(arg, format);
 	index = 0;
 	while (format[index])
 	{
 		if (format[index] != '%')
-			write(1, &format[index], 1);
-		else if (format[index + 1] && format[index] == '%')
 		{
-			ft_print(&arg, format[index + 1]);
-			index++;
+			write(1, &format[index], 1);
+			res++;
+		}
+		else
+		{
+			if (format[index + 1])
+			{
+				res += ft_print(&arg, format[index + 1]);
+				index++;
+			}
 		}
 		index++;
 	}
+	printf("\nfrom ft_printf: res = %d\n", res);
 	return (res);
 }

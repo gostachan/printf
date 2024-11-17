@@ -14,14 +14,16 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-void	print_x(va_list *ptr, char *base_cahr)
+int	print_x(va_list *ptr, char *base_cahr)
 {
 	unsigned int	ui;
 	char			*hex;
+	int res;
 
 	ui = va_arg(*ptr, unsigned int);
 	hex = to_hex(ui, base_cahr);
 	putstr("0x");
-	putstr(hex);
+	res = putstr(hex) + 2;
 	free(hex);
+	return res;
 }

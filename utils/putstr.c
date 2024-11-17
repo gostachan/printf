@@ -13,10 +13,17 @@
 #include "../headers/utils.h"
 #include <unistd.h>
 
-void	putstr(char *str)
+int	putstr(char *str)
 {
 	int	len;
 
 	len = ft_strlen(str);
 	write(1, str, len);
+	return len;
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	printf("res = %d\n", putstr("42Tokyo\n"));
+// }

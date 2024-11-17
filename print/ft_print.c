@@ -15,26 +15,22 @@
 
 int	ft_print(va_list *arg, char c)
 {
-	int	res;
-
-	res = 0;
 	if (c == 'c')
-		print_c(arg);
+		return print_c(arg);
 	else if (c == 's')
-		print_s(arg);
+		return print_s(arg);
 	else if (c == 'd')
-		print_d(arg);
+		return print_d(arg);
 	else if (c == 'i')
-		print_i(arg);
+		return print_i(arg);
 	else if (c == 'p')
-		print_p(arg);
+		return print_p(arg);
 	else if (c == 'u')
-		print_u(arg);
+		return print_u(arg);
 	else if (c == 'x')
-		print_x(arg, "0123456789abcdef");
+		return print_x(arg, "0123456789abcdef");
 	else if (c == 'X')
-		print_x(arg, "0123456789ABCDEF");
-	else
-		write(1, &c, 1);
-	return (res);
+		return print_x(arg, "0123456789ABCDEF");
+	write(1, &c, 1);
+	return 1;
 }
