@@ -1,26 +1,34 @@
-// #include <stdio.h>
+#include <stdint.h>
+#include <stdio.h>
+#include "headers/utils.h"
+
 // int main(void)
 // {
-// 	int n = 10;
-// 	int array[n];
-// 	for (int i = 0; i < n; ++i)
-// 	{
-// 		printf("&array[%d] = %p\n", i, &array[i]);
-// 		printf("&array[%d] = %ld\n", i, &array[i]);
-// 	}
+// 	char *str = "hoge";
+// 	long ll;
+// 	ll = (long long)str;
+// 	printf("%p\n", str);
+// 	printf("%ld\n", ll);
+// 	printf("%ld\n", 0x5fd7bad3a004);
 // }
 
-#include <stdio.h>
+void l(void *p)
+{
+	uintptr_t ptr;
+	char *hex;
 
-int main() {
+	ptr = (uintptr_t)p;
+	hex = to_hex(ptr, "0123456789abcdef");
+	putstr("0x");
+	putstr(hex);
+}
 
-	printf("%%d: 42 = %d\n", 42);
-	printf("%%i: 42 = %i\n", 42);
+int main(void)
+{
+	char *str = "hoge";
 
-	printf("%%d: 042 = %d\n", 042);
-	printf("%%i: 042 = %i\n", 042);
-
-	printf("%%d: 0x42 = %d\n", 0x42);
-	printf("%%i: 0x42 = %i\n", 0x42);
-    return 0;
+	l(str);
+	printf("\n");
+	printf("%p", str);
+	printf("\n");
 }

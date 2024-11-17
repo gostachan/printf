@@ -1,10 +1,11 @@
 #include <stdarg.h>
+#include <stdio.h>
 #include <stdlib.h>
 
-static int get_les_size(unsigned int n);
+static int get_les_size(unsigned long long n);
 char *to_hex(unsigned long long n, char *base);
 
-static int get_les_size(unsigned int n)
+static int get_les_size(unsigned long long n)
 {
 	int res;
 
