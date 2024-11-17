@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hmisaki <hmisaki@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/17 14:41:53 by hmisaki           #+#    #+#             */
+/*   Updated: 2024/11/17 14:55:10 by hmisaki          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "headers/print.h"
 #include "headers/utils.h"
 #include <stdarg.h>
-#include <stdio.h>
 #include <unistd.h>
 
-int	ft_printf(const char *, ...);
+int	ft_printf(const char *format, ...);
 
 int	ft_printf(const char *format, ...)
 {

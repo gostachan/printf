@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stdarg.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hmisaki <hmisaki@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/17 14:42:30 by hmisaki           #+#    #+#             */
+/*   Updated: 2024/11/17 14:57:17 by hmisaki          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdarg.h>
 #include <stdio.h>
 
@@ -9,17 +21,6 @@ void	printargs(int arg1, ...)
 	int		i;
 
 	va_start(ap, arg1);
-	for (i = arg1; i >= 0; i = va_arg(ap, int))
-		printf("%d ", i);
 	va_end(ap);
 	putchar('\n');
-}
-
-int	main(void)
-{
-	printargs(5, 2, 14, 84, 97, 15, 24, 48, -1);
-	printargs(84, 51, -1);
-	printargs(-1);
-	printargs(1, -1);
-	return (0);
 }
