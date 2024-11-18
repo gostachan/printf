@@ -28,6 +28,11 @@ int	putnbr(long long n)
 {
 	int	res;
 
+	if (n == 0)
+	{
+		write(1, "0", 1);
+		return 1;
+	}
 	res = 0;
 	if (n < 0)
 	{
