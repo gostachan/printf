@@ -12,6 +12,8 @@
 
 #include "../headers/utils.h"
 #include <stdarg.h>
+#include <unistd.h>
+#include <stdlib.h>
 #include <stdint.h>
 
 int	print_p(va_list *ptr)
@@ -19,10 +21,19 @@ int	print_p(va_list *ptr)
 	void		*p;
 	uintptr_t	addr;
 	char		*hex;
+	int			res;
 
+	res = 0;
 	p = va_arg(*ptr, void *);
+	if (!p)
+	{
+		write(1, "(nil)", 5);
+		return 5;
+	}
 	addr = (uintptr_t)p;
 	hex = to_hex(addr, "0123456789abcdef");
 	putstr("0x");
-	return (putstr(hex) + 2);
+	res = putstr(hex) + 2;
+	free(hex);
+	return res;
 }
