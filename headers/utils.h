@@ -6,7 +6,7 @@
 /*   By: hmisaki <hmisaki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:41:39 by hmisaki           #+#    #+#             */
-/*   Updated: 2024/11/17 14:41:40 by hmisaki          ###   ########.fr       */
+/*   Updated: 2024/11/17 20:57:22 by hmisaki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define UTILS_H
 
 int		ft_strlen(char *str);
-int	putnbr(long n);
-int	putstr(char *str);
+int		putnbr(long n);
+int		putstr(char *str);
 char	*to_oct(unsigned long long n, char *base);
 char	*to_hex(unsigned long long n, char *base);
 

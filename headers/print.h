@@ -6,7 +6,7 @@
 /*   By: hmisaki <hmisaki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:41:36 by hmisaki           #+#    #+#             */
-/*   Updated: 2024/11/17 14:41:37 by hmisaki          ###   ########.fr       */
+/*   Updated: 2024/11/17 20:57:02 by hmisaki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdarg.h>
 
-int		ft_print(va_list *arg, char c);
+int	ft_print(va_list *arg, char c);
 int	print_c(va_list *ptr);
 int	print_s(va_list *ptr);
 int	print_p(va_list *ptr);

@@ -6,7 +6,7 @@
 /*   By: hmisaki <hmisaki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:42:02 by hmisaki           #+#    #+#             */
-/*   Updated: 2024/11/17 14:42:03 by hmisaki          ###   ########.fr       */
+/*   Updated: 2024/11/17 20:57:53 by hmisaki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	putstr(char *str)
 
 	len = ft_strlen(str);
 	write(1, str, len);
-	return len;
+	return (len);
 }
 
 // #include <stdio.h>

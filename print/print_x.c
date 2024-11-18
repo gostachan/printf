@@ -6,7 +6,7 @@
 /*   By: hmisaki <hmisaki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:41:23 by hmisaki           #+#    #+#             */
-/*   Updated: 2024/11/17 14:41:24 by hmisaki          ###   ########.fr       */
+/*   Updated: 2024/11/17 20:58:12 by hmisaki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,11 @@ int	print_x(va_list *ptr, char *base_cahr)
 {
 	unsigned int	ui;
 	char			*hex;
-	int res;
+	int				res;
 
 	ui = va_arg(*ptr, unsigned int);
 	hex = to_hex(ui, base_cahr);
-	putstr("0x");
-	res = putstr(hex) + 2;
+	res = putstr(hex);
 	free(hex);
-	return res;
+	return (res);
 }

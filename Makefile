@@ -7,7 +7,6 @@ ARS = ar rcs
 
 SRCS = ft_printf.c \
 	   print/ft_print.c \
-       print/print_X.c \
        print/print_c.c \
        print/print_d.c \
        print/print_i.c \

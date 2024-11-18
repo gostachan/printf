@@ -6,15 +6,13 @@
 /*   By: hmisaki <hmisaki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:41:53 by hmisaki           #+#    #+#             */
-/*   Updated: 2024/11/17 14:55:10 by hmisaki          ###   ########.fr       */
+/*   Updated: 2024/11/17 21:00:12 by hmisaki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "headers/print.h"
 #include <stdarg.h>
 #include <unistd.h>
-
-#include <stdio.h>
 
 int	ft_printf(const char *format, ...);
 
@@ -26,6 +24,7 @@ int	ft_printf(const char *format, ...)
 
 	va_start(arg, format);
 	index = 0;
+	res = 0;
 	while (format[index])
 	{
 		if (format[index] != '%')
@@ -43,6 +42,5 @@ int	ft_printf(const char *format, ...)
 		}
 		index++;
 	}
-	printf("\nfrom ft_printf: res = %d\n", res);
 	return (res);
 }

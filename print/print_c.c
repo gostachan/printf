@@ -6,7 +6,7 @@
 /*   By: hmisaki <hmisaki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:40:25 by hmisaki           #+#    #+#             */
-/*   Updated: 2024/11/17 14:40:27 by hmisaki          ###   ########.fr       */
+/*   Updated: 2024/11/17 20:59:17 by hmisaki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ int	print_c(va_list *ptr)
 
 	c = va_arg(*ptr, int);
 	write(1, &c, 1);
-	return 1;
+	return (1);
 }

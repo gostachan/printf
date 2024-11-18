@@ -6,7 +6,7 @@
 /*   By: hmisaki <hmisaki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:42:05 by hmisaki           #+#    #+#             */
-/*   Updated: 2024/11/17 14:42:07 by hmisaki          ###   ########.fr       */
+/*   Updated: 2024/11/17 20:58:02 by hmisaki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ static void	rec(long long n, int *res)
 
 int	putnbr(long long n)
 {
-	int res;
+	int	res;
+
 	res = 0;
 	if (n < 0)
 	{
@@ -35,5 +36,5 @@ int	putnbr(long long n)
 		res++;
 	}
 	rec(n, &res);
-	return res;
+	return (res);
 }
