@@ -22,6 +22,9 @@ int	ft_printf(const char *format, ...)
 	int		index;
 	int		res;
 
+	if (!format)
+		return -1;
+
 	va_start(arg, format);
 	index = 0;
 	res = 0;
